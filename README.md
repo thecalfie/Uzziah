@@ -21,7 +21,7 @@ Unless you have received **prior written permission** from the copyright owner, 
 All source code, design elements, branding, layouts, graphics, animations, written content, and associated assets contained within this repository are protected by applicable copyright and intellectual property laws.
 
 Access to this repository **does not** grant any license or permission to copy, distribute, or reuse any of its contents.
-
+ 
 ### Monitoring
 
 Access to this repository may be monitored. Any unauthorized use, copying, distribution, or infringement may be documented and used as evidence.

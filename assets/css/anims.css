@@ -1,0 +1,143 @@
+:root{
+     /* Backgrounds */
+  --background: #0a0f0a;
+  --foreground: #e8f5e8;
+
+  /* Cards */
+  --card: #0f1a0f;
+  --card-foreground: #d4edda;
+
+  /* Primary Brand */
+  --primary: #1db954;
+  --primary-foreground: #0a0f0a;
+
+  /* Secondary */
+  --secondary: #1a2a1a;
+  --secondary-foreground: #a8d5a8;
+
+  /* Muted */
+  --muted: #162016;
+  --muted-foreground: #6b9b6b;
+
+  /* Accent */
+  --accent: #f0c420;
+  --accent-foreground: #0a0f0a;
+
+  /* Borders & Focus */
+  --border: rgba(29, 185, 84, 0.18);
+  --ring: #1db954;
+
+  /* Screen Settings */
+  --max-Width: 1400px;
+
+}
+
+
+
+
+
+/* ==========================================
+   Grid Scan Background
+   ========================================== */
+
+.GridScanBG {
+    position: relative;
+    overflow: hidden;
+    background: var(--background);
+    isolation: isolate;
+}
+
+/* Subtle Grid */
+.GridScanBG::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        linear-gradient(rgba(0, 255, 120, 0.02) 0.5px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 120, 0.02) 0.5px, transparent 1px);
+
+    background-size: 40px 40px;
+
+    filter: drop-shadow(0 0 3px rgba(0, 255, 120, 0.05));
+
+    /* Fade toward the edges */
+    mask-image: radial-gradient(
+        ellipse at center,
+        black 45%,
+        transparent 100%
+    );
+
+    -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        black 45%,
+        transparent 100%
+    );
+
+    z-index: 0;
+}
+
+/* Scan Line */
+/* Scanning Overlay */
+.GridScanBG::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 49.7%,
+        rgba(0,255,120,.02) 49.9%,
+        rgba(0,255,120,.08) 50%,
+        rgba(0,255,120,.02) 50.1%,
+        transparent 50.3%,
+        transparent 100%
+    );
+
+    background-size: 100% 250%;
+    background-position: 0 -150%;
+
+    filter: none;
+
+    animation: GridScanMove 8s linear infinite;
+}
+
+@keyframes GridScanMove{
+    from{
+        background-position: 0 150%;
+    }
+
+    to{
+        background-position: 0 -150%;
+    }
+}
+
+
+@keyframes pulse-ring {
+    
+0% {
+    transform: scale(1);
+    opacity: 0.6;
+}
+
+
+100% {
+    transform: scale(2.4);
+    opacity: 0;
+}
+}
+
+
+
+@keyframes shimmer {
+    0%{
+        background-position: -200%;
+    }
+
+    100%{
+        background-position: 200%;
+    }
+}

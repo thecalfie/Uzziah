@@ -1,0 +1,568 @@
+:root{
+     /* Backgrounds */
+  --background: #0a0f0a;
+  --foreground: #e8f5e8;
+  --transparent: rgba(29,185,84,0.3);
+
+  /* Cards */
+  --card: #0f1a0f;
+  --card-foreground: #d4edda;
+
+  /* Primary Brand */
+  --primary: #1db954;
+  --primary-foreground: #0a0f0a;
+  --primary-font: font-family: 'Rajdhani', sans-serif;
+
+  /* Secondary */
+  --secondary: #1a2a1a;
+  --secondary-foreground: #a8d5a8;
+
+  /* Muted */
+  --muted: #162016;
+  --muted-foreground: #6b9b6b;
+
+  /* Accent */
+  --accent: #f0c420;
+  --accent-foreground: #0a0f0a;
+
+  /* Borders & Focus */
+  --border: rgba(29, 185, 84, 0.18);
+  --ring: #1db954;
+
+  /* Screen Settings */
+  --max-Width: 1200px;
+
+  /* Font */
+    --font-display: 'Rajdhani', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+  
+}
+
+body{
+    background: var(--background);
+}
+
+
+
+.NavBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    max-width: var(--max-Width);
+    margin: 0px auto;
+    padding: 0px 24px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+
+    background: var(--background);
+    z-index: 1000;
+}
+
+
+.NavBtn{
+    color: var(--secondary-foreground);
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    padding: 8px 16px;
+    border-radius: 2px;
+    transition: 0.2s;
+    text-transform: uppercase;
+    background: transparent;
+}
+
+.NavBtn:last-child{
+    margin-left: 8px;
+    background: var(--primary);
+    color: var(--primary-foreground);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: 0.2s;
+    border-color: var(--primary);
+}
+
+
+.NavBox{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+
+}
+
+
+.HamBurger{
+    display:none;
+
+    width:48px;
+    height:48px;
+
+    justify-content:center;
+    align-items:center;
+
+    color:var(--primary);
+
+    cursor:pointer;
+
+    border:none;
+    background:transparent;
+
+    transition:.25s;
+    z-index: 1002;
+}
+
+.HamBurger:hover{
+    color:var(--accent);
+}
+
+.HamBurger svg{
+    width:32px;
+    height:32px;
+}
+
+#hero{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+#PingTitle{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(29, 185, 84, 0.1);
+    border: 1px solid rgba(29, 185, 84, 0.1) ;
+    border-radius: 2px;
+    padding: 6px 14px;
+    margin-bottom: 28px;
+}
+
+#pingText{
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--primary);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.pingBall{
+  width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgb(29, 185, 84);
+    display: inline-block;
+    box-shadow: rgb(29, 185, 84) 0px 0px 6px;
+
+}
+
+
+#landingArea{
+        
+        padding-left: 40px;
+        padding-right: 40px;
+        
+        align-items: center;
+        margin: 200px auto;
+        padding-bottom: 0;
+}
+
+
+#LandingArea_midBox{
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px 24px;
+    width: 100%;
+}
+
+#LandingArea_midBox2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+
+.LandingArea_midBox_box p{
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--muted-foreground);
+    margin-bottom: 36px;
+    max-width: 480px;
+}
+
+
+#h1SecuringWhat{
+    font-family: var(--font-display);
+    font-size: clamp(36px, 5vw, 68px);
+    font-weight: 700;
+    line-height: 1.05;
+    margin: 0px 0px 20px;
+    color: var(--foreground);
+    letter-spacing: -0.01em;
+}
+
+.text-shimmer{
+    background: linear-gradient(90deg, #1db954, #f0c420, #1db954);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+}
+
+
+#ChangingText{
+    font-family: var(--font-display);
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 24px;
+    min-height: 36px;
+    letter-spacing: 0.04em;
+     min-width:12ch;
+     display: block;
+     block-size: 36px;
+}
+
+#BTN_Group_1{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+#OurServiceBtn{
+    background: transparent;
+    color: var(--foreground);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: 0.2s;
+    border: 1px solid var(--border);
+    display: inline-block;
+}
+
+#RequestAFreeQuoteBtn{
+    background: var(--primary);
+    color: var(--primary-foreground);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: 0.2s;
+    border-color: var(--primary);
+    display: inline-block;
+    transform: none;
+    box-shadow: none;
+}
+
+
+.service-card{
+
+}
+
+
+
+
+[id^="SecuritySolutions"][id$="_Box"]{
+    display:none;
+    animation:fadeUp .3s ease;
+}
+
+[id^="SecuritySolutions"][id$="_Box"].active{
+    display:block;
+}
+
+/* Smooth transitions */
+.service-card,
+.service-card svg,
+.service-card [style*="Learn More"],
+.service-card div:last-child{
+    transition: color .25s ease,
+                border-color .25s ease;
+}
+
+/* ===========================
+   ODD CARDS
+=========================== */
+
+.service-card:nth-child(odd):hover{
+    border-top:3px solid var(--primary) !important;
+}
+
+.service-card:nth-child(odd):hover svg,
+.service-card:nth-child(odd):hover div:last-child{
+    color:var(--primary) !important;
+}
+
+/* ===========================
+   EVEN CARDS
+=========================== */
+
+.service-card:nth-child(even):hover{
+    border-top:3px solid var(--accent) !important;
+}
+
+.service-card:nth-child(even):hover svg,
+.service-card:nth-child(even):hover div:last-child{
+    color:var(--accent) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:992px){
+
+    .HamBurger{
+        display:flex;
+    }
+
+    #NavBoxButtonContainer{
+
+        position:fixed;
+
+        top:0;
+        right:-340px;
+
+        width:320px;
+        height:100vh;
+
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:18px;
+
+        padding:90px 30px;
+
+        background:var(--card);
+
+        border-left:1px solid var(--border);
+
+        box-shadow:-15px 0 40px rgba(0,0,0,.45);
+
+        transition:right .35s ease;
+
+        z-index:1000;
+    }
+
+    #NavBoxButtonContainer.active{
+        right:0;
+    }
+
+    .NavBtn{
+        width:100%;
+        padding:14px 0;
+        border-bottom:1px solid rgba(255,255,255,.06);
+    }
+
+    .NavBtn:last-child{
+        margin-top:15px;
+        text-align:center;
+    }
+}
+/* ==========================================
+   TABLETS (1024px)
+========================================== */
+@media (max-width:1024px){
+
+    #LandingArea_midBox2{
+        grid-template-columns:1fr;
+        gap:60px;
+        text-align:center;
+    }
+
+    .LandingArea_midBox_box p{
+        max-width:700px;
+        margin:0 auto 36px;
+    }
+
+    #BTN_Group_1{
+        justify-content:center;
+    }
+
+    .services-grid{
+        grid-template-columns:repeat(2,1fr)!important;
+    }
+
+    .detail-grid{
+        grid-template-columns:1fr!important;
+        gap:32px!important;
+    }
+
+    .detail-grid ul{
+        grid-template-columns:repeat(2,1fr)!important;
+    }
+}
+
+
+/* ==========================================
+   LARGE PHONES (768px)
+========================================== */
+@media (max-width:768px){
+
+    .NavBar{
+        padding:0 18px;
+    }
+
+    #landingArea{
+        margin:120px auto 80px;
+        padding:0 20px;
+    }
+
+    #LandingArea_midBox{
+        padding:0;
+    }
+
+    #h1SecuringWhat{
+        font-size:48px;
+    }
+
+    #ChangingText{
+        font-size:22px;
+        min-height:30px;
+    }
+
+    .LandingArea_midBox_box p{
+        font-size:15px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr!important;
+    }
+
+    .detail-grid ul{
+        grid-template-columns:1fr!important;
+    }
+
+    [id^="SecuritySolutions"][id$="_Box"]{
+        padding:30px 24px!important;
+    }
+
+    #BTN_Group_1{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    #BTN_Group_1 a{
+        width:100%;
+        text-align:center;
+    }
+
+    section{
+        padding-left:20px!important;
+        padding-right:20px!important;
+    }
+}
+
+
+/* ==========================================
+   SMALL PHONES (480px)
+========================================== */
+@media (max-width:480px){
+
+    .NavBar{
+        height:64px;
+    }
+
+    #landingArea{
+        margin:100px auto 60px;
+        padding:0 15px;
+    }
+
+    #PingTitle{
+        margin:0 auto 24px;
+    }
+
+    #pingText{
+        font-size:10px;
+    }
+
+    #h1SecuringWhat{
+        font-size:36px;
+        line-height:1.1;
+    }
+
+    #ChangingText{
+        font-size:18px;
+    }
+
+    .LandingArea_midBox_box p{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    #OurServiceBtn,
+    #RequestAFreeQuoteBtn{
+        width:100%;
+        padding:16px;
+    }
+
+    .services-grid button{
+        padding:22px!important;
+    }
+
+    .services-grid h3,
+    .services-grid div[style*="font-size: 18px"]{
+        font-size:17px!important;
+    }
+
+    .detail-grid h3{
+        font-size:24px!important;
+    }
+
+    .detail-grid p{
+        font-size:14px!important;
+    }
+
+    .detail-grid ul{
+        font-size:13px!important;
+    }
+
+    #NavBoxButtonContainer{
+        width:100%;
+        right:-100%;
+    }
+
+    #NavBoxButtonContainer.active{
+        right:0;
+    }
+}

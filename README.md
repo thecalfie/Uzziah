@@ -16,7 +16,7 @@ Unless you have received **prior written permission** from the copyright owner, 
 * Use any portion of this project for personal, commercial, or educational purposes.
 * Claim ownership of any part of this work.
 
-### Intellectual Property
+### Intellectual Property 
 
 All source code, design elements, branding, layouts, graphics, animations, written content, and associated assets contained within this repository are protected by applicable copyright and intellectual property laws.
 
